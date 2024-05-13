@@ -1,23 +1,25 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-public static void main(String[] args) {
+    public static void main(String[] args) {
+        List<String> lista = new ArrayList<>();
 
-Queue<String> carros = new LinkedList<>();
+        lista.add("matemática");
+        lista.add("português");
+        lista.add("história");
+        lista.add("etm");
 
-carros.add("Ford");
-carros.add("Honda");
-carros.add("Nissan");
-carros.add("Jeep");
+        System.out.println("A lista é:");
+        System.out.println(lista);
 
-String front = carros.poll();
-System.out.println("O carro removido da fila foi o " + front);
+        String Y = lista.remove(1);
+        System.out.println("O elemento removido da lista foi " + Y);
 
-System.out.println("O carro que está no topo da pilha é " + carros.peek());
+        String X = lista.set(0, "biologia");
+        System.out.println("A lista atualizada é " + lista);
 
-boolean queue = carros.isEmpty();
-System.out.println("A fila de carros está vazia? " + queue);
-
+        String elemento = lista.get(2);
+        System.out.println("O quarto elemento da lista é: " + elemento);
     }
 }
